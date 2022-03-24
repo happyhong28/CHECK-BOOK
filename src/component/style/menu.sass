@@ -1,0 +1,43 @@
+.CPNT-menu
+  padding-bottom: 25px
+  width : fit-contents
+  height : fit-contents 
+
+  .menuItem
+    width: 210px
+    height: 40px
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1)
+    background: #00c48c
+    color: #f0f0f0
+    border-style: none
+    border-radius: 7px
+    list-style: none
+    transition: all 320ms ease
+    margin-top: 10px
+    border: 2px solid #00c48c
+
+    &:active, &:hover
+      cursor: pointer
+      background: #ffffff
+      border: 2px solid #00c48c
+      color: #00c48c
+
+    &:last-child
+      margin-bottom: 10px
+
+    .menuTitle
+      position: relative
+      top: 13px
+      left: 13px
+      font-size: 15px
+      font-weight: 600
+
+    .menu-icon
+      width: fit-content
+      height: fit-content
+      position: relative
+      top: -2px
+      right: -170px
+
+      path
+        fill: white

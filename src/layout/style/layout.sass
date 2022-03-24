@@ -1,0 +1,40 @@
+.LAYOUT-header
+  position: absolute
+  width: 800px
+  height: 10%
+  left: calc(50% - 800px / 2)
+
+  svg
+    position: absolute
+    top: calc(50% - 36px / 2)
+    left: calc(50% - 36px / 2)
+
+.LAYOUT-body
+  position: absolute
+  width: 800px
+  height: 80%
+  top: 10%
+  left: calc(50% - 800px / 2)
+  background-color: white
+  border-radius: 8px
+  overflow: scroll
+
+/* 스크롤 기능은 살리되 스크롤바는 숨기기
+::-webkit-scrollbar
+  display: none
+
+.LAYOUT-footer
+  position: absolute
+  width: 800px
+  height: 10%
+  top: 90%
+  left: calc(50% - 800px / 2)
+  display: flex
+
+  .button
+    position: absolute
+    width: 36px
+    height: 36px
+    top: calc(50% - 36px / 2)
+    left: calc(50% - 36px / 2)
+
