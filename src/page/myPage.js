@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect ,useRef } from 'react';
 import "../common/reset.css";
 import "../common/common.sass";
 import "./style/myPage.sass";
@@ -8,10 +8,11 @@ import Footer from "../layout/footer";
 import SimpleList from "../component/simpleList";
 import Map from "../component/map";
 import Menu from "../component/menu";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 
-function MyPage() {
-  const name = "가나다";
+
+function MyPage({ page }) {
+  const NAME = "가나다";
+  const [index, setIndex] = useState(0);
 
   return (
     <>
@@ -20,17 +21,18 @@ function MyPage() {
         <div className="PAGE-myPage title">
           <div>안녕하세요</div>
           <div>
-            <span className="name">{name}</span>
+            <span className="name">{NAME}</span>
             님!
           </div>
         </div>
         <div className="lowerSide">
-          <Menu></Menu>
-          <SimpleList></SimpleList>
+          <Menu setIndex={setIndex}></Menu>
+          <p>{index}</p>
+          {/* <SimpleList></SimpleList> */}
           {/* <Map></Map> */}
         </div>
       </Body>
-      <Footer></Footer>
+      <Footer page={page}></Footer>
     </>
   );
 }

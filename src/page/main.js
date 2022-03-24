@@ -8,7 +8,7 @@ import Footer from "../layout/footer";
 import GridList from "../component/gridList";
 import SearchBar from "../component/searchBar";
 
-function Main() {
+function Main({page}) {
   return (
     <>
       <Header></Header>
@@ -16,7 +16,7 @@ function Main() {
         <SearchBar></SearchBar>
         <GridList></GridList>
       </Body>
-      <Footer></Footer>
+      <Footer page={page}></Footer>
     </>
   );
 }
