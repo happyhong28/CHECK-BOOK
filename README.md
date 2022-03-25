@@ -41,4 +41,7 @@ import React, { useState, useEffect ,useRef } from 'react';
 투두리스트
 1. 색상코드 변수에 담아서 관리하도록 변경하기
 2. 404 페이지 꾸미기
+3. ajax 로 도서검색 목록 불러오기
+
+메뉴에 해당하는 컴포넌트 띄우기 / 콘솔 한박자 늦게 찍힘 현상 해결
 

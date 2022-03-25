@@ -44,15 +44,15 @@ function Menu(props) {
 
   function activeMenu(index) {
     setActive(index);
+    props.setIndex(index);//자식 -> 부모 컴포넌트에 데이터를 전달해주는 역할(setter)이다. 
   }
 
-  //props.setIndex 는 자식 -> 부모 컴포넌트에 데이터를 전달해주는 역할(setter)이다.
+  
   return (
     <ul className="CPNT-menu menuList">
       {MENU.map((menu, index) => (
         <li className={`menuItem ${active === index ? 'active' : ''}`} key={index} onClick={() => {
-          // activeMenu(index); props.setIndex(active);
-          activeMenu(index); props.setIndex(() => {return active;});
+          activeMenu(index); 
         }} >
           <div className="menuTitle">{menu.menuTitle}</div>
           <GetIcon type={menu.iconType}></GetIcon>

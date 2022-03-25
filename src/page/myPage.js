@@ -11,7 +11,7 @@ import Menu from "../component/menu";
 
 
 function ShowRightSide({index}){
-  console.log({index});
+  //메뉴에 해당하는 컴포넌트를 보여주기 위한 분기처리
   if (index === 0) { 
     return <SimpleList></SimpleList>;
   }else if (index === 1) {
@@ -28,7 +28,6 @@ function ShowRightSide({index}){
 }
 
 function MyPage({ page }) {
-  console.log("PAGE");
   const NAME = "가나다";
   const [index, setIndex] = useState(0);
 
@@ -46,8 +45,6 @@ function MyPage({ page }) {
         <div className="lowerSide">
           <Menu setIndex={setIndex}></Menu>
           <ShowRightSide index={index}></ShowRightSide>
-          {/* <SimpleList></SimpleList> */}
-          {/* <Map></Map> */}
         </div>
       </Body>
       <Footer page={page}></Footer>
