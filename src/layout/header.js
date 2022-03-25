@@ -36,4 +36,5 @@ function Header() {
   );
 }
 
-export default Header;
+//재렌더링 방지
+export default React.memo(Header);

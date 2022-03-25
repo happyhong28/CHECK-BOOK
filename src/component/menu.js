@@ -38,27 +38,21 @@ function GetIcon({ type }) {
 
 
 function Menu(props) {
-  console.log(props);
 
   //메뉴를 클릭할 때 마다 해당 메뉴의 인덱스 값을 받아서 active 라는 클래스명을 추가한다.
   const [active, setActive] = useState(0); //기본 값은 첫번째 메뉴
 
   function activeMenu(index) {
     setActive(index);
-    sendData();
   }
 
-  //부모 컴포넌트에 데이터를 전달해주는 함수
-  function sendData(){
-    props.setIndex(active);
-  }
-
-
+  //props.setIndex 는 자식 -> 부모 컴포넌트에 데이터를 전달해주는 역할(setter)이다.
   return (
     <ul className="CPNT-menu menuList">
       {MENU.map((menu, index) => (
-        <li className={`menuItem ${active == index ? 'active' : ''}`} key={index} onClick={() => {
-          activeMenu(index);
+        <li className={`menuItem ${active === index ? 'active' : ''}`} key={index} onClick={() => {
+          // activeMenu(index); props.setIndex(active);
+          activeMenu(index); props.setIndex(() => {return active;});
         }} >
           <div className="menuTitle">{menu.menuTitle}</div>
           <GetIcon type={menu.iconType}></GetIcon>

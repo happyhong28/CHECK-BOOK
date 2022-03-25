@@ -29,4 +29,5 @@ function Footer({page} ) {
   );
 }
 
-export default Footer;
+//재렌더링 방지
+export default React.memo(Footer);

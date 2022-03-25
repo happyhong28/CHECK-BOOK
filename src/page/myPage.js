@@ -10,7 +10,25 @@ import Map from "../component/map";
 import Menu from "../component/menu";
 
 
+function ShowRightSide({index}){
+  console.log({index});
+  if (index === 0) { 
+    return <SimpleList></SimpleList>;
+  }else if (index === 1) {
+    return <SimpleList></SimpleList>;
+  } else if (index === 2) {
+    return <Map></Map>;
+  } else if (index === 3) {
+    return <Map></Map>;
+  } else if (index === 4) {
+    return <SimpleList></SimpleList>;
+  }else{
+    return null;
+  }
+}
+
 function MyPage({ page }) {
+  console.log("PAGE");
   const NAME = "가나다";
   const [index, setIndex] = useState(0);
 
@@ -27,7 +45,7 @@ function MyPage({ page }) {
         </div>
         <div className="lowerSide">
           <Menu setIndex={setIndex}></Menu>
-          <p>{index}</p>
+          <ShowRightSide index={index}></ShowRightSide>
           {/* <SimpleList></SimpleList> */}
           {/* <Map></Map> */}
         </div>
