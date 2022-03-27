@@ -1,14 +1,14 @@
 import React from "react";
 import "../common/reset.css";
 import "../common/common.sass";
-import "./style/card.sass";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import TextInfoContent from "@mui-treasury/components/content/textInfo";
 import { useBlogTextInfoContentStyles } from "@mui-treasury/styles/textInfoContent/blog";
-import { useOverShadowStyles } from "@mui-treasury/styles/shadow/over";
+import "./style/card.sass";
+
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   root: {
@@ -28,9 +28,11 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
       flexDirection: "column"
     },
 
-    "&:hover": {
-      opacity: 0.3
-    }
+    // "&:hover": {
+    //   opacity: 0.3
+    // },
+
+  
   },
 
   media: {
@@ -63,8 +65,9 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     textTransform: "initial"
   },
   btnList: {
-    position: "absolute",
-    top: 70
+    top: -240,
+    left: 102,
+    position: "relative"
   },
   button: {
     display: "flex",
@@ -84,37 +87,39 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   }
 }));
 
-export const BlogCardDemo = React.memo(function BlogCard() {
+//gridList 로 부터 받아온 데이터
+export const BlogCardDemo = React.memo(function BlogCard({data}) {
+  console.log(data);
+  
   const getStyles = useStyles();
   const {
     button: buttonStyles,
     ...contentStyles
   } = useBlogTextInfoContentStyles();
-  const shadowStyles = useOverShadowStyles();
 
   return (
-    <>
-      {/* <Card className={cx(styles.card, getStyles.root, shadowStyles.root)}> */}
-      <Card className={`CPNT-card root ${getStyles.root}`}>
+    <div className="CPNT-card">
+      <Card className={`root ${getStyles.root}`}>
         <CardMedia
           className={getStyles.media}
-          image={"https://picsum.photos/200/300"}
+          image={data.thumbnail}
         />
         <CardContent>
           <TextInfoContent
             classes={contentStyles}
-            body={"물고기는 존재하지 않는다."}
-            overline={"저자/출판년도/출판사"}
+            body={data.title}
+            overline={data.authors[0]+" | "+data.datetime.substr(0,4)+" | "+data.publisher}
           />
         </CardContent>
-        <div className={getStyles.btnList}>
+      </Card>
+        {/* <div className={` ${getStyles.btnList} btnList`} style={{display:"none"}}> */}
+        <div className={` ${getStyles.btnList} btnList`}>
           <button className={getStyles.button}>구매</button>
           <button className={getStyles.button}>대여</button>
           <button className={getStyles.button}>관심</button>
           <button className={getStyles.button}>읽음</button>
         </div>
-      </Card>
-    </>
+    </div>
   );
 });
 

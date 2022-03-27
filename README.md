@@ -45,3 +45,8 @@ import React, { useState, useEffect ,useRef } from 'react';
 
 메뉴에 해당하는 컴포넌트 띄우기 / 콘솔 한박자 늦게 찍힘 현상 해결
 
+
+ // <React.StrictMode>
+    <App />,
+  // </React.StrictMode>,
+

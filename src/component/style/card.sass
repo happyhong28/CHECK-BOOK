@@ -1,2 +1,29 @@
-.CPNT-card
+.root
   margin: auto
+
+  &:hover 
+    opacity: 0.3
+
+  &:hover + .btnList
+    display : block
+
+.btnList
+  display : none
+
+  &:hover
+    opacity: 1
+    display : block
+
+    & + .root
+      opacity: 0.3
+  
+
+
+
+
+
+    
+
+
+
+
