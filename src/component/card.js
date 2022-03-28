@@ -27,12 +27,6 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     [breakpoints.up("md")]: {
       flexDirection: "column"
     },
-
-    // "&:hover": {
-    //   opacity: 0.3
-    // },
-
-  
   },
 
   media: {

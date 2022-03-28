@@ -1,12 +1,12 @@
-import * as React from "react";
+import React, { useState, useEffect ,useRef,useMemo } from 'react';
 import "../common/reset.css";
 import "../common/common.sass";
 
 import SelectUnstyled, {
-  selectUnstyledClasses
+  selectUnstyledClasses,
 } from "@mui/base/SelectUnstyled";
 import OptionUnstyled, {
-  optionUnstyledClasses
+  optionUnstyledClasses,
 } from "@mui/base/OptionUnstyled";
 import PopperUnstyled from "@mui/base/PopperUnstyled";
 import { styled } from "@mui/system";
@@ -17,7 +17,7 @@ const blue = {
   400: "#3399FF",
   500: "#007FFF",
   600: "#0072E5",
-  900: "#003A75"
+  900: "#003A75",
 };
 
 const grey = {
@@ -29,7 +29,7 @@ const grey = {
   600: "#6F7E8C",
   700: "#3E5060",
   800: "#2D3843",
-  900: "#1A2027"
+  900: "#1A2027",
 };
 
 const StyledButton = styled("button")(
@@ -134,18 +134,41 @@ const CustomSelect = React.forwardRef(function CustomSelect(props, ref) {
     Root: StyledButton,
     Listbox: StyledListbox,
     Popper: StyledPopper,
-    ...props.components
+    ...props.components,
   };
 
   return <SelectUnstyled {...props} ref={ref} components={components} />;
 });
 
-export default function UnstyledSelectSimple() {
+function UnstyledSelectSimple() {
+  const selectList = [
+    { kor: "제목", eng: "title" },
+    { kor: "저자", eng: "author" },
+    { kor: "출판사", eng: "publisher" },
+    { kor: "ISBN", eng: "isbn" },
+  ];
+
+  const [selected, setSelected] = useState("");
+
+  useEffect(()=> { 
+    console.log(selected);
+    
+   },[selected]);
+
+
+  const handleSelect = (e) => {
+    setSelected(e);
+  };
+
   return (
-    <CustomSelect defaultValue="title">
-      <StyledOption value="title">제목</StyledOption>
-      <StyledOption value="author">저자</StyledOption>
-      <StyledOption value="publisher">출판사</StyledOption>
+    <CustomSelect defaultValue="title" onChange={handleSelect}>
+      {selectList.map((item, index) => (
+        <StyledOption value={item.eng} key={index}>
+          {item.kor}
+        </StyledOption>
+      ))}
     </CustomSelect>
   );
 }
+
+export default React.memo(UnstyledSelectSimple);
