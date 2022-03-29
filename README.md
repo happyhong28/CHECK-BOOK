@@ -50,3 +50,7 @@ TO-DO
 <App />,
 </React.StrictMode>,
 
+카카오 로그인 api 사용할 때 그 토큰을 그대로 사용하면 안된다.
+해킹 위험이 있으므로 나의 전용 토큰으로 바꿔줘야함 (아래 링크 참고!)
+https://data-jj.tistory.com/53
+

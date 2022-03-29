@@ -1,0 +1,41 @@
+.pagination
+  display: flex
+  justify-content: center
+  margin-top: -30px
+
+ul
+  list-style: none
+  padding: 0
+
+  &.pagination li
+    display: inline-block
+    width: 30px
+    height: 20px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 14px
+    font-family: "Nanum Gothic", sans-serif;
+
+    a
+      text-decoration: none
+      color: #00C48C
+      font-size: 14px
+
+    &.active
+      a
+        color: white
+
+      background-color: #00C48C
+      border-radius: 10px
+
+
+    a
+      &:hover, &.active
+        color: #00C48C
+        border-radius: 10px
+
+.page-selection
+  width: 48px
+  height: 30px
+  color: #00C48C

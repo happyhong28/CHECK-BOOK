@@ -59,9 +59,9 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     textTransform: "initial"
   },
   btnList: {
-    top: -240,
-    left: 102,
-    position: "relative"
+    // top: -240,
+    // left: 102,
+    // position: "relative"
   },
   button: {
     display: "flex",
@@ -83,37 +83,35 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
 
 //gridList 로 부터 받아온 데이터
 export const BlogCardDemo = React.memo(function BlogCard({data}) {
-  console.log(data);
-  
   const getStyles = useStyles();
   const {
     button: buttonStyles,
     ...contentStyles
   } = useBlogTextInfoContentStyles();
 
+  const desc = `| ${data.authors[0]}\n`;
+
   return (
-    <div className="CPNT-card">
-      <Card className={`root ${getStyles.root}`}>
+      <>
+      <Card className={`CPNT-card ${getStyles.root}`}>
         <CardMedia
           className={getStyles.media}
           image={data.thumbnail}
         />
-        <CardContent>
-          <TextInfoContent
-            classes={contentStyles}
-            body={data.title}
-            overline={data.authors[0]+" | "+data.datetime.substr(0,4)+" | "+data.publisher}
-          />
-        </CardContent>
-      </Card>
-        {/* <div className={` ${getStyles.btnList} btnList`} style={{display:"none"}}> */}
-        <div className={` ${getStyles.btnList} btnList`}>
+        <div className="desc">
+          <div className="title">{data.title}</div>
+          <div className="datetime">| {data.datetime.substr(0,4)}</div>
+          <div className="authors">| {data.authors[0]}</div>
+          <div className="publisher">| {data.publisher}</div>
+         </div>
+        <div className="btnList">
           <button className={getStyles.button}>구매</button>
           <button className={getStyles.button}>대여</button>
           <button className={getStyles.button}>관심</button>
           <button className={getStyles.button}>읽음</button>
         </div>
-    </div>
+      </Card>
+    </>
   );
 });
 
