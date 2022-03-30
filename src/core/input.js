@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState,useEffect,useRef } from 'react';
 import "../common/reset.css";
 import "../common/common.sass";
 
@@ -38,7 +38,7 @@ const StyledInputElement = styled("input")(
   border: 1px solid ${theme.palette.mode === "dark" ? grey[800] : grey[300]};
   border-radius: 10px;
   padding: 12px 12px;
-  margin-left: 10px;
+  margin-left: 6px;
 
   &:hover {
     border-color: ${theme.palette.mode === "dark" ? grey[700] : grey[400]};
@@ -50,19 +50,22 @@ const StyledInputElement = styled("input")(
 `
 );
 
+
+
 const CustomInput = React.forwardRef(function CustomInput(props, ref) {
+  console.log("재렌더링");
   return (
     <InputUnstyled
       components={{ Input: StyledInputElement }}
       {...props}
       ref={ref}
     >
-      {" "}
     </InputUnstyled>
   );
 });
 
-export default function UnstyledInput() {
+function Input(props) {
+
   return (
     <>
       <CustomInput
@@ -72,3 +75,7 @@ export default function UnstyledInput() {
     </>
   );
 }
+
+
+// export default React.memo(Input);
+export default Input;

@@ -140,28 +140,20 @@ const CustomSelect = React.forwardRef(function CustomSelect(props, ref) {
   return <SelectUnstyled {...props} ref={ref} components={components} />;
 });
 
-function UnstyledSelectSimple() {
+
+function Select(props) {
+  console.log("재렌더링");
+
   const selectList = [
     { kor: "제목", eng: "title" },
-    { kor: "저자", eng: "author" },
+    { kor: "저자", eng: "person" },
     { kor: "출판사", eng: "publisher" },
     { kor: "ISBN", eng: "isbn" },
   ];
 
-  const [selected, setSelected] = useState("");
-
-  useEffect(()=> { 
-    console.log(selected);
-    
-   },[selected]);
-
-
-  const handleSelect = (e) => {
-    setSelected(e);
-  };
-
+ 
   return (
-    <CustomSelect defaultValue="title" onChange={handleSelect}>
+    <CustomSelect defaultValue="title">
       {selectList.map((item, index) => (
         <StyledOption value={item.eng} key={index}>
           {item.kor}
@@ -171,4 +163,4 @@ function UnstyledSelectSimple() {
   );
 }
 
-export default React.memo(UnstyledSelectSimple);
+export default React.memo(Select);

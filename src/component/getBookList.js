@@ -6,7 +6,6 @@ import { bookSearch } from "../api/bookSearch";
 // useEffect(() => {
 //     bookSearchHttpHandler(); // 컴포넌트 마운트 후에, 함수를 호출한다.
 // }, []);
-const DATA = {} ;
 // blog search 핸들러
 const bookSearchHttpHandler = async () => {
     // parameter 설정
