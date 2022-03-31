@@ -13,8 +13,10 @@ import "./style/card.sass";
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   root: {
     alignItems: "center",
-    width: "200px",
-    height: "280px",
+    width: "160px",
+    height: "220px",
+    // width: "200px",
+    // height: "280px",
     borderRadius: spacing(2), // 16px
     transition: "0.3s",
     boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
@@ -101,7 +103,7 @@ export const BlogCardDemo = React.memo(function BlogCard({data}) {
         <div className="desc">
           <div className="title">{data.title}</div>
           <div className="datetime">| {data.datetime.substr(0,4)}</div>
-          <div className="authors">| {data.authors[0]}</div>
+          <div className="authors">| {data.authors.length == 1 ? data.authors[0] : data.authors[0]+" 외"}</div>
           <div className="publisher">| {data.publisher}</div>
          </div>
         <div className="btnList">

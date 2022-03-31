@@ -1,7 +1,7 @@
 .pagination
   display: flex
   justify-content: center
-  margin-top: -30px
+  margin-top: -40px
 
 ul
   list-style: none
@@ -16,6 +16,7 @@ ul
     align-items: center
     font-size: 14px
     font-family: "Nanum Gothic", sans-serif;
+    margin : 0px 2px
 
     a
       text-decoration: none
@@ -25,15 +26,17 @@ ul
     &.active
       a
         color: white
+        background-color: #00C48C
+        padding: 5px
+        border-radius: 5px
 
-      background-color: #00C48C
-      border-radius: 10px
-
+        &:hover, &.active
+          // color: #00C48C
 
     a
       &:hover, &.active
-        color: #00C48C
-        border-radius: 10px
+        font-weight: 700
+        font-size: 1.0rem
 
 .page-selection
   width: 48px

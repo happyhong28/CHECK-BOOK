@@ -4,11 +4,11 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 
 function SwitchPage({page, children}) {
-    console.log(`Go To ${page} 🚀`);
+    console.log(`Ready To Go ${page} 🚀`);
     return (
       <Link to={`/${page}`}>
           {children}
       </Link>
     );
   }
-export default SwitchPage;
+export default React.memo(SwitchPage);

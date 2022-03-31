@@ -38,7 +38,7 @@
 -------------------------------------------
 #### 메모장
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"; 
-import React, { useState, useEffect ,useRef,useMemo } from 'react';
+import React, { useState, useEffect ,useRef,useMemo ,useRef} from 'react';
 
 TO-DO
 1. 색상코드 변수에 담아서 관리하도록 변경하기

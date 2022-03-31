@@ -5,28 +5,35 @@ import './style/pagination.sass';
 import Pagination from "react-js-pagination";
 
 
-const Paging = ({data, size}) => {
-    console.log("호출");
-    console.log(data.total_count);
-    const [page, setPage] = useState(1);
-    const handlePageChange = (page) => { 
-        setPage(page); 
-        console.log("현재 페이지는 ",page);
+const Paging = (props) => {
+    console.log("Paging is Ready!");
+
+    const [nowPage, setNowPage] = useState(1);
+
+    useEffect(() => {
+    }, [nowPage]);
+
+
+    const handlePageChange = (page) => {
+        console.log("page pagination", page);
+        setNowPage(page);
+        // props.setPage(page);
     };
 
     return (
         <Pagination
-            activePage={page}
-            itemsCountPerPage={size}
-            totalItemsCount={30}
-            // totalItemsCount={data.total_count}
+            activePage={nowPage}
+            itemsCountPerPage={props.size}
+            totalItemsCount={props.data.total_count}
             pageRangeDisplayed={10}
-            prevPageText={"‹"}
-            nextPageText={"›"}
+            firstPageText={"|◀"}
+            prevPageText={"◀"}
+            nextPageText={"▶"}
+            lastPageText={"▶|"}
             onChange={handlePageChange}
         />
     );
-}; 
+};
 
 export default Paging;
 

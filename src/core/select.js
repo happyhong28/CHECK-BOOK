@@ -43,7 +43,7 @@ const StyledButton = styled("button")(
   background: ${theme.palette.mode === "dark" ? grey[900] : "#fff"};
   border: 1px solid ${theme.palette.mode === "dark" ? grey[800] : grey[300]};
   border-radius: 10px;
-  margin: 0.5em;
+  // margin: 0.5em;
   padding: 10px;
   text-align: left;
   line-height: 1.5;
@@ -142,7 +142,8 @@ const CustomSelect = React.forwardRef(function CustomSelect(props, ref) {
 
 
 function Select(props) {
-  console.log("재렌더링");
+  console.log("Select is Ready!");
+
 
   const selectList = [
     { kor: "제목", eng: "title" },

@@ -53,7 +53,6 @@ const StyledInputElement = styled("input")(
 
 
 const CustomInput = React.forwardRef(function CustomInput(props, ref) {
-  console.log("재렌더링");
   return (
     <InputUnstyled
       components={{ Input: StyledInputElement }}
@@ -65,6 +64,7 @@ const CustomInput = React.forwardRef(function CustomInput(props, ref) {
 });
 
 function Input(props) {
+  console.log("Input is Ready!");
 
   return (
     <>
@@ -77,5 +77,4 @@ function Input(props) {
 }
 
 
-// export default React.memo(Input);
-export default Input;
+export default React.memo(Input);
