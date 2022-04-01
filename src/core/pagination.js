@@ -4,27 +4,20 @@ import "../common/common.sass";
 import './style/pagination.sass';
 import Pagination from "react-js-pagination";
 
-
 const Paging = (props) => {
     console.log("Paging is Ready!");
-
-    const [nowPage, setNowPage] = useState(1);
-
-    useEffect(() => {
-    }, [nowPage]);
-
-
+        
+    let activePage = props.activePage;
     const handlePageChange = (page) => {
-        console.log("page pagination", page);
-        setNowPage(page);
-        // props.setPage(page);
+        activePage = page;
+        props.getPage(page); //선택된 페이지 값을 부모 컴포넌트로 보내준다.
     };
 
     return (
         <Pagination
-            activePage={nowPage}
+            activePage={activePage}
             itemsCountPerPage={props.size}
-            totalItemsCount={props.data.total_count}
+            totalItemsCount={props.pageable_count}
             pageRangeDisplayed={10}
             firstPageText={"|◀"}
             prevPageText={"◀"}
@@ -35,6 +28,7 @@ const Paging = (props) => {
     );
 };
 
+// export default React.memo(Paging);
 export default Paging;
 
 

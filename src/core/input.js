@@ -70,7 +70,7 @@ function Input(props) {
     <>
       <CustomInput
         aria-label="search input"
-        placeholder="검색어를 입력해주세요...."
+        placeholder="검색어를 입력해주세요."
       ></CustomInput>
     </>
   );

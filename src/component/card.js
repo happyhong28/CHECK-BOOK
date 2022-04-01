@@ -4,8 +4,6 @@ import "../common/common.sass";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import TextInfoContent from "@mui-treasury/components/content/textInfo";
 import { useBlogTextInfoContentStyles } from "@mui-treasury/styles/textInfoContent/blog";
 import "./style/card.sass";
 
@@ -70,7 +68,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     flexDirection: "row",
     backgroundColor: "#00c48c",
     fontWeight: 400,
-    fontSize: 15,
+    fontSize: 13,
     color: "#FFFFFF",
     borderStyle: "none",
     borderRadius: 6,
@@ -83,6 +81,14 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   }
 }));
 
+
+const handleClick = function(url){
+  if(url != ""){
+    window.open(url, '_blank');
+  }
+}
+
+
 //gridList 로 부터 받아온 데이터
 export const BlogCardDemo = React.memo(function BlogCard({data}) {
   const getStyles = useStyles();
@@ -91,14 +97,13 @@ export const BlogCardDemo = React.memo(function BlogCard({data}) {
     ...contentStyles
   } = useBlogTextInfoContentStyles();
 
-  const desc = `| ${data.authors[0]}\n`;
 
   return (
       <>
       <Card className={`CPNT-card ${getStyles.root}`}>
         <CardMedia
           className={getStyles.media}
-          image={data.thumbnail}
+          image={data.thumbnail != "" ? data.thumbnail : "https://search1.kakaocdn.net/thumb/C116x164.q85/?fname=http://search1.daumcdn.net/search/statics/common/img/noimg/4grid.png"}
         />
         <div className="desc">
           <div className="title">{data.title}</div>
@@ -107,12 +112,14 @@ export const BlogCardDemo = React.memo(function BlogCard({data}) {
           <div className="publisher">| {data.publisher}</div>
          </div>
         <div className="btnList">
+          <button className={getStyles.button} onClick={()=>handleClick(data.url)}>상세</button>
           <button className={getStyles.button}>구매</button>
           <button className={getStyles.button}>대여</button>
           <button className={getStyles.button}>관심</button>
           <button className={getStyles.button}>읽음</button>
         </div>
       </Card>
+      <a></a>
     </>
   );
 });
