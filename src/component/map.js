@@ -2,13 +2,14 @@ import React, { useRef, useEffect } from "react";
 import "../common/reset.css";
 import "../common/common.sass";
 import "./style/map.sass";
-import { libraryLocation } from "../api/libraryLocation"; 
+// import { libraryLocation } from "../api/libraryLocation"; 
 
 /*global kakao*/
 
 const { kakao } = window;
 
-console.log(libraryLocation);
+// console.log(libraryLocation);
+
 
 const Map = () => {
 
