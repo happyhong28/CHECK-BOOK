@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "../common/reset.css";
-import "../common/common.sass";
+// import "../common/common.sass";
 import "./style/menu.sass";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 

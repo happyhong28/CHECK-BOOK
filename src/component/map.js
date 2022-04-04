@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import "../common/reset.css";
-import "../common/common.sass";
+// import "../common/common.sass";
 import "./style/map.sass";
 // import { libraryLocation } from "../api/libraryLocation"; 
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect ,useRef,useMemo } from 'react';
 import "../common/reset.css";
-import "../common/common.sass";
+// import "../common/common.sass";
 
 import SelectUnstyled, {
   selectUnstyledClasses,

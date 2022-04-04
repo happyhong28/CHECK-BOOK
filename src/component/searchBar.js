@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import "../common/reset.css";
-import "../common/common.sass";
+// import "../common/common.sass";
 import "./style/searchBar.sass";
 import Select from "../core/select";
 import Input from "../core/input";

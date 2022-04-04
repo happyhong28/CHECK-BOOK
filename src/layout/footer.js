@@ -1,7 +1,7 @@
 import * as React from "react";
 import "../common/reset.css";
 import "./style/layout.sass";
-import "../common/common.sass";
+// import "../common/common.sass";
 import  SwitchPage from "../component/switchPage";
 
 function Footer({page} ) {

@@ -1,6 +1,6 @@
 import React from "react";
 import "../common/reset.css";
-import "../common/common.sass";
+// import "../common/common.sass";
 import "./style/item.sass";
 
 function Item() {

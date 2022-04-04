@@ -1,6 +1,6 @@
 import React from "react";
 import "../common/reset.css";
-import "../common/common.sass";
+// import "../common/common.sass";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";

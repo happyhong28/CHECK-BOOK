@@ -1,0 +1,60 @@
+@import "../../common/_common.sass";
+
+.signInForm
+    position: absolute
+    width: 800px
+    top: 10%
+    left: calc(50% - 300px / 2)
+    display: inline-flex
+    flex-direction: column
+
+    .imgBasicSignIn, .imgKakaoSignIn
+        width : 300px
+        height : 44px
+        margin-top: 12px
+
+    .imgBasicSignIn
+        background-color: $POINT-COLOR-1 
+        font-weight: 600
+
+        &:hover
+            background-color: $POINT-COLOR-1 
+
+    .imgKakaoSignIn
+        box-shadow: 0px 3px 1px -2px RGB(0 0 0 / 20%), 0px 2px 2px 0px RGB(0 0 0 / 14%), 0px 1px 5px 0px RGB(0 0 0 / 12%)
+
+        &:hover
+            box-shadow: 0px 2px 4px -1px RGB(0 0 0 / 20%), 0px 4px 5px 0px RGB(0 0 0 / 14%), 0px 1px 10px 0px RGB(0 0 0 / 12%)
+        
+.signUpBox
+    position: absolute
+    width: 800px
+    top: 60%
+    left: calc(50% - 300px / 2)
+    display: inline-flex
+    flex-direction: column
+
+    div
+        font-size: 12px
+        color: $BASE-COLOR-4
+
+    .imgBasicSignUp, .imgKakaoSignUp    
+        width : 300px
+        height : 44px
+        margin-top: 12px
+    
+    .imgBasicSignUp
+        background-color: $POINT-COLOR-1 
+        font-weight: 600
+
+        &:hover
+            background-color: $POINT-COLOR-1 
+
+    .imgKakaoSignUp
+        box-shadow: 0px 3px 1px -2px RGB(0 0 0 / 20%), 0px 2px 2px 0px RGB(0 0 0 / 14%), 0px 1px 5px 0px RGB(0 0 0 / 12%)
+
+        &:hover
+            box-shadow: 0px 2px 4px -1px RGB(0 0 0 / 20%), 0px 4px 5px 0px RGB(0 0 0 / 14%), 0px 1px 10px 0px RGB(0 0 0 / 12%)
+
+    a
+        text-decoration-line : none

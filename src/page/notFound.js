@@ -1,6 +1,6 @@
 import * as React from "react";
 import "../common/reset.css";
-import "../common/common.sass";
+// import "../common/common.sass";
 
 function NotFound(){
     return(

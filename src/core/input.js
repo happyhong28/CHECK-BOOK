@@ -1,6 +1,6 @@
 import React, { useState,useEffect,useRef } from 'react';
 import "../common/reset.css";
-import "../common/common.sass";
+// import "../common/common.sass";
 
 import InputUnstyled from "@mui/base/InputUnstyled";
 import { styled } from "@mui/system";
