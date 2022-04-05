@@ -1,6 +1,5 @@
 import React, { useState, useEffect ,useRef } from 'react';
 import "../common/reset.css";
-// import "../common/common.sass";
 import "./style/myPage.sass";
 import Header from "../layout/header";
 import Body from "../layout/body";
@@ -8,6 +7,7 @@ import Footer from "../layout/footer";
 import SimpleList from "../component/simpleList";
 import Map from "../component/map";
 import Menu from "../component/menu";
+
 
 
 function ShowRightSide({index}){
@@ -30,6 +30,7 @@ function ShowRightSide({index}){
 function MyPage({ page }) {
   const NAME = "가나다";
   const [index, setIndex] = useState(0);
+  
 
   return (
     <>
