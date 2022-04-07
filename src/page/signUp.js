@@ -2,7 +2,6 @@ import * as React from "react";
 import "../common/reset.css";
 import "./style/signUp.sass";
 import SwitchPage from "../component/switchPage";
-import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Input from '@mui/material/Input';
@@ -38,10 +37,7 @@ function SignUp({ page }) {
   };
 
   return (
-    // <SwitchPage page={page}>
-    //   <div>회원가입 화면입니다.</div>
-    // </SwitchPage>
-
+ 
     <>
        <div className="signUpForm">
         <svg
@@ -105,8 +101,8 @@ function SignUp({ page }) {
         <TextField id="standard-basic" label="성별" variant="standard" />
 
         </Box>
-        <SwitchPage page={page}>
-        <Button className="imgBasicSignUp" variant="contained">회원가입</Button>
+        <SwitchPage page="">
+        <button className="imgBasicSignUp" variant="contained">회원가입</button>
         </SwitchPage>
 
       </div>

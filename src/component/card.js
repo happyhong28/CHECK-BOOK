@@ -58,11 +58,6 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     marginTop: 24,
     textTransform: "initial"
   },
-  btnList: {
-    // top: -240,
-    // left: 102,
-    // position: "relative"
-  },
   button: {
     display: "flex",
     flexDirection: "row",

@@ -1,3 +1,5 @@
+@import "../../common/_common.sass"
+
 .CPNT-menu
   padding-bottom: 25px
   width : fit-contents
@@ -6,21 +8,23 @@
   .menuItem
     width: 210px
     height: 40px
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1)
-    background: #00c48c
-    color: #f0f0f0
+    box-shadow: $SHADOW-STYLE-1
+    background: $POINT-COLOR-1
+    color: $BASE-COLOR-1
     border-style: none
     border-radius: 7px
     list-style: none
     transition: all 320ms ease
     margin-top: 10px
-    border: 2px solid #00c48c
+    border: 2px solid $POINT-COLOR-1
+    overflow: hidden //아이콘 영역이 계속 침범해서 클릭되는 현상 방지
 
     &:active, &:hover,  &.active
       cursor: pointer
-      background: #ffffff
-      border: 2px solid #00c48c
-      color: #00c48c
+      background: $BASE-COLOR-1
+      border: 2px solid $POINT-COLOR-1
+      color: $POINT-COLOR-1
+
 
     &:last-child
       margin-bottom: 10px
@@ -40,4 +44,4 @@
       right: -170px
 
       path
-        fill: white
+        fill: $BASE-COLOR-1

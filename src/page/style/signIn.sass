@@ -7,11 +7,19 @@
     left: calc(50% - 300px / 2)
     display: inline-flex
     flex-direction: column
+    
 
     .imgBasicSignIn, .imgKakaoSignIn
         width : 300px
         height : 44px
+        border: none
+        color: $BASE-COLOR-1
         margin-top: 12px
+        border-radius: 7px
+        box-shadow: $SHADOW-STYLE-2
+
+        &:hover
+            box-shadow: $SHADOW-STYLE-3
 
     .imgBasicSignIn
         background-color: $POINT-COLOR-1 
@@ -20,11 +28,6 @@
         &:hover
             background-color: $POINT-COLOR-1 
 
-    .imgKakaoSignIn
-        box-shadow: 0px 3px 1px -2px RGB(0 0 0 / 20%), 0px 2px 2px 0px RGB(0 0 0 / 14%), 0px 1px 5px 0px RGB(0 0 0 / 12%)
-
-        &:hover
-            box-shadow: 0px 2px 4px -1px RGB(0 0 0 / 20%), 0px 4px 5px 0px RGB(0 0 0 / 14%), 0px 1px 10px 0px RGB(0 0 0 / 12%)
         
 .signUpBox
     position: absolute
@@ -41,7 +44,14 @@
     .imgBasicSignUp, .imgKakaoSignUp    
         width : 300px
         height : 44px
+        border: none
+        color: $BASE-COLOR-1
         margin-top: 12px
+        border-radius: 7px
+        box-shadow: $SHADOW-STYLE-2
+
+        &:hover
+            box-shadow: $SHADOW-STYLE-3
     
     .imgBasicSignUp
         background-color: $POINT-COLOR-1 
@@ -49,12 +59,6 @@
 
         &:hover
             background-color: $POINT-COLOR-1 
-
-    .imgKakaoSignUp
-        box-shadow: 0px 3px 1px -2px RGB(0 0 0 / 20%), 0px 2px 2px 0px RGB(0 0 0 / 14%), 0px 1px 5px 0px RGB(0 0 0 / 12%)
-
-        &:hover
-            box-shadow: 0px 2px 4px -1px RGB(0 0 0 / 20%), 0px 4px 5px 0px RGB(0 0 0 / 14%), 0px 1px 10px 0px RGB(0 0 0 / 12%)
 
     a
         text-decoration-line : none

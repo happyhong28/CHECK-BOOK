@@ -31,7 +31,6 @@ const StyledInputElement = styled("input")(
   width: 400px;
   height : 16px;
   font-size: 0.875rem;
-  font-family: IBM Plex Sans, sans-serif;
   font-weight: 400;
   line-height: 1.0;
   color: ${theme.palette.mode === "dark" ? grey[300] : grey[900]};

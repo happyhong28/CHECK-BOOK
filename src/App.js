@@ -10,25 +10,25 @@ import SignUp from "./page/signUp";
 
 function GoSignIn() {
   return (
-      <SignIn page="signUp"></SignIn>
+      <SignIn></SignIn>
   );
 }
 
 function GoSignUp() {
   return (
-      <SignUp page=""></SignUp>
+      <SignUp></SignUp>
   );
 }
 
 function GoMain() {
   return (
-      <Main page="myPage"></Main>
+      <Main></Main>
   );
 }
 
 function GoMyPage() {
   return (
-      <MyPage page="main"></MyPage>
+      <MyPage></MyPage>
   );
 }
 

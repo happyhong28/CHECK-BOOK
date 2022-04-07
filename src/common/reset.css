@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
 
 html,
 body,
@@ -89,9 +88,8 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  /* font: inherit; */
   vertical-align: baseline;
-  font-family: "Nanum Gothic", sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -106,21 +104,17 @@ menu,
 nav,
 section {
   display: block;
-  font-family: "Nanum Gothic", sans-serif;
 }
 body {
   line-height: 1;
-  font-family: "Nanum Gothic", sans-serif;
 }
 ol,
 ul {
   list-style: none;
-  font-family: "Nanum Gothic", sans-serif;
 }
 blockquote,
 q {
   quotes: none;
-  font-family: "Nanum Gothic", sans-serif;
 }
 blockquote:before,
 blockquote:after,
@@ -128,10 +122,8 @@ q:before,
 q:after {
   content: "";
   content: none;
-  font-family: "Nanum Gothic", sans-serif;
 }
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  font-family: "Nanum Gothic", sans-serif;
 }

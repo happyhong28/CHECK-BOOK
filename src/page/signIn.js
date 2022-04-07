@@ -1,8 +1,6 @@
 import * as React from "react";
 import "../common/reset.css";
-import "./style/signIn.sass";
 import SwitchPage from "../component/switchPage";
-import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Input from '@mui/material/Input';
@@ -12,6 +10,7 @@ import FormControl from '@mui/material/FormControl';
 import TextField from '@mui/material/TextField';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import "./style/signIn.sass";
 
 
 function SignIn({ page }) {
@@ -94,19 +93,19 @@ function SignIn({ page }) {
             }
           />
         </FormControl>
+        <SwitchPage page="main">
+        <button className="imgBasicSignIn" variant="contained">이메일 로그인</button>
+        </SwitchPage>
 
-        <Button className="imgBasicSignIn" variant="contained">이메일 로그인</Button>
-        <Button className="imgKakaoSignIn"><img alt="login button" src="img/kakao_signin_medium_wide.png" /></Button>
-
+        <div className="imgKakaoSignIn"><img alt="login button" src="img/kakao_signin_medium_wide.png" /></div>
       </div>
       
       <div className="signUpBox">
         <div>계정이 없으신가요?</div>
-        <SwitchPage page={page}>
-          <Button className="imgBasicSignUp" variant="contained">이메일 회원가입</Button>
+        <SwitchPage page="signUp">
+          <button className="imgBasicSignUp" variant="contained">이메일 회원가입</button>
         </SwitchPage>
-        <Button className="imgKakaoSignUp"><img alt="login button" src="img/kakao_signup_medium_wide.png" /></Button>
-
+        <div className="imgKakaoSignUp"><img alt="login button" src="img/kakao_signup_medium_wide.png" /></div>
 
       </div>
 

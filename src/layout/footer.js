@@ -4,11 +4,14 @@ import "./style/layout.sass";
 // import "../common/common.sass";
 import  SwitchPage from "../component/switchPage";
 
-function Footer({page} ) {
+function Footer({page}) {
+  //이 푸터가 메인에 있는 푸터인지, 마이페이지에 있는 푸터인지 알아야
+  //페이지를 왔다갔다 할 수 있기 때문에 변수에 따로 저장한다.
+  var URL = window.location.href.split("/");
   return (
     <>
       <div className="LAYOUT-footer">
-        <SwitchPage page={page}>
+        <SwitchPage page={URL[URL.length-1] == "main" ? "myPage" : "main"}>
           <div className="button" >
             <svg
               xmlns="http://www.w3.org/2000/svg"
