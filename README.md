@@ -55,3 +55,9 @@ TO-DO
 해킹 위험이 있으므로 나의 전용 토큰으로 바꿔줘야함 (아래 링크 참고!)
 https://data-jj.tistory.com/53
 
+
+
+
+데이터 출처 
+전국 도서관 위치 정보 https://www.data.go.kr/data/15013109/standard.do
+전국 서점 위치 정보 https://www.bigdata-culture.kr/bigdata/user/data_market/detail.do?id=33660160-404b-11eb-af9a-4b03f0a582d6

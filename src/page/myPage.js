@@ -17,9 +17,9 @@ function ShowRightSide({index}){
   }else if (index === 1) {
     return <SimpleList></SimpleList>;
   } else if (index === 2) {
-    return <Map></Map>;
+    return <Map type="library"></Map>;
   } else if (index === 3) {
-    return <Map></Map>;
+    return <Map type="bookstore"></Map>;
   } else if (index === 4) {
     return <SimpleList></SimpleList>;
   }else{
