@@ -41,11 +41,13 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import React, { useState, useEffect ,useRef,useMemo ,useRef} from 'react';
 
 TO-DO
-1. 색상코드 변수에 담아서 관리하도록 변경하기
-2. 404 페이지 꾸미기
-3. 시멘틱에러 검색 시 3권 이하면 밑에 바디 쪽 이상한거 해결하기
-4. 전국 도서관 위치 불러와서 거리 비교하고 2키로 이내 뭐 이런식으로만 보여주기
-5. 서점도 마찬가지
+1. 404 페이지 꾸미기
+2. 시멘틱에러 검색 시 3권 이하면 밑에 바디 쪽 이상한거 해결하기
+3. 회원정소 수정창 만들기
+4. 기획 파일 만들기
+5. 피그마 수정하기
+6. 리드미 정리하기
+
 
 <React.StrictMode>
 <App />,
