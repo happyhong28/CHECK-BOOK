@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../common/reset.css";
-// import "../common/common.sass";
 import "./style/gridList.sass";
 import Card from "./card";
 import Box from "@mui/material/Box";

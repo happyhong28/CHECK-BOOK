@@ -1,10 +1,14 @@
 import * as React from "react";
 import "../common/reset.css";
-// import "../common/common.sass";
+import "./style/notFound.sass";
 
 function NotFound(){
     return(
-        <div>404 존재하지 않는 페이지 입니다.</div>
+        <div className="PAGE-notFound">
+            <div className="span404">4📚4</div>
+            <div>존재하지 않는 페이지 입니다.</div>
+        </div>
+
     );
 }
 

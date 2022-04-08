@@ -18,6 +18,11 @@ import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 
 https://taling-react-course.com/4ac15/react-router.html
 
-1. 실제로 서버에 올려보기 (오늘 집가서 하기)
-2. 라우팅 구현하기
+
+컴포넌트 단위를 어느정도로 잡아야할지 감이 안옴
+너무 세세하게 자르자니 파일이 지나치게 많아지는 느낌이고
+크게 자르자니 재활용이 어려워짐...
+프로젝트 구조잡는게 좀 어려운...ㅠㅠ
+
+
 

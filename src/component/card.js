@@ -1,11 +1,10 @@
 import React from "react";
 import "../common/reset.css";
-// import "../common/common.sass";
+import "./style/card.sass";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import { useBlogTextInfoContentStyles } from "@mui-treasury/styles/textInfoContent/blog";
-import "./style/card.sass";
 
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
@@ -13,8 +12,6 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     alignItems: "center",
     width: "160px",
     height: "220px",
-    // width: "200px",
-    // height: "280px",
     borderRadius: spacing(2), // 16px
     transition: "0.3s",
     boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",

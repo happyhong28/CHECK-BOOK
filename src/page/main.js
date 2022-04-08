@@ -1,6 +1,5 @@
 import React, { useState, useEffect,useReducer  } from 'react';
 import "../common/reset.css";
-// import "../common/common.sass";
 import "./style/main.sass";
 import Header from "../layout/header";
 import Body from "../layout/body";

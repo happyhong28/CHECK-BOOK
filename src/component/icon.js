@@ -1,6 +1,5 @@
 import * as React from "react";
 import "../common/reset.css";
-// import "../common/common.sass";
 import "./style/icon.sass";
 
 function Icon({ type }) {

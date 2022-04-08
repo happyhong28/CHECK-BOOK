@@ -1,7 +1,6 @@
 import * as React from "react";
 import "../common/reset.css";
 import "./style/layout.sass";
-// import "../common/common.sass";
 
 function Header() {
   return (

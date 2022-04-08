@@ -1,6 +1,5 @@
 import * as React from "react";
 import "../common/reset.css";
-// import "../common/common.sass";
 import "./style/layout.sass";
 
 // 컴포넌트 안에 컴포넌트를 넣을 때

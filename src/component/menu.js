@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "../common/reset.css";
-// import "../common/common.sass";
 import "./style/menu.sass";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 
 
 //클릭된 메뉴에는 active라는 클래스를 추가하기 위해

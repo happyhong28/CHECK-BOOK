@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import "../common/reset.css";
-// import "../common/common.sass";
 import './style/pagination.sass';
 import Pagination from "react-js-pagination";
 
