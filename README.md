@@ -41,7 +41,9 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import React, { useState, useEffect ,useRef,useMemo ,useRef} from 'react';
 
 TO-DO
-1. 404 페이지 꾸미기
+1. 도서관 서점 데이터 이상한거 해결하기
+2. 호버하면 위도경도 센터 바뀌게 하기
+3. 반경 선택 적용하기
 2. 시멘틱에러 검색 시 3권 이하면 밑에 바디 쪽 이상한거 해결하기
 3. 회원정소 수정창 만들기
 4. 기획 파일 만들기

@@ -7,16 +7,21 @@
 예) CPNT-icon, PAGE-myPage
 
 2. 기존 스타일 적용 시에  module.css 형식을 사용했지만 추후에 테마 및 색상 변경을 고려했을 때
-변수활용이 반드시 필요할 것 같아서 모든 스타일을 sass 로 교체한다. (2022/03/23)
+변수활용 및 믹스인이 반드시 필요할 것 같아서 모든 스타일을 css -> sass 로 교체한다. (2022/03/23)
 
 3. mui 를 통해 가져온 스타일의 경우 따로 변경하지 않고 인라인 스타일 코드를 유지한다.
 
 4. 퍼블리싱 용 클래스명 : 대문자로 시작 / 개발 용 클래스명 : 소문자로 시작
 
 
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 
-https://taling-react-course.com/4ac15/react-router.html
+
+
+
+
+
+
+
 
 
 컴포넌트 단위를 어느정도로 잡아야할지 감이 안옴
